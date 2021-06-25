@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<meta lang="zh-CN">
-
+<meta  lang="zh-CN" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#fff" id="theme-color">
-  <link rel="icon" href="/img/Kaze.png">
+  <link rel="icon" href="/img/Kaze.jpg">
   <title>小杨的博客</title>
   <script>
     // control reverse button
@@ -21,15 +20,15 @@
       light: '#fff'
     }
     // get the data of css prefers-color-scheme
-    var getCssMediaQuery = function () {
+    var getCssMediaQuery = function() {
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     };
     // reverse current darkmode setting function
-    var reverseDarkModeSetting = function () {
+    var reverseDarkModeSetting = function() {
       var setting = localStorage.getItem('user-color-scheme');
-      if (reverseDarkList[setting]) {
+      if(reverseDarkList[setting]) {
         setting = reverseDarkList[setting];
-      } else if (setting === null) {
+      } else if(setting === null) {
         setting = reverseDarkList[getCssMediaQuery()];
       } else {
         return;
@@ -38,13 +37,13 @@
       return setting;
     };
     // apply current darkmode setting
-    var setDarkmode = function (mode) {
+    var setDarkmode = function(mode) {
       var setting = mode || localStorage.getItem('user-color-scheme');
-      if (setting === getCssMediaQuery()) {
+      if(setting === getCssMediaQuery()) {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[setting];
-      } else if (reverseDarkList[setting]) {
+      } else if(reverseDarkList[setting]) {
         document.documentElement.setAttribute('data-user-color-scheme', setting);
         document.getElementById('theme-color').content = themeColor[setting];
       } else {
@@ -64,324 +63,316 @@
       document.body.appendChild(script);
     }
   </script>
-
-  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style">
-  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style">
-
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
   <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
-
-
+  
+  
   <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
 
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
 
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
 
-
-
-
-
-
-  <link rel="stylesheet" href="/css/main.css">
-
-
-
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
-
-
-
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
-
-
-
-
-  <meta name="generator" content="Hexo 5.4.0">
-</head>
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
   <div class="wrapper">
-
+    
     <nav class="navbar">
-      <div class="navbar-logo">
-        <span class="navbar-logo-main">
-
-          <img class="navbar-logo-img" src="/img/Kaze.png">
-
-          <span class="navbar-logo-dsc">小杨的博客</span>
-        </span>
-      </div>
-      <div class="navbar-menu">
-
-        <a href="/" class="navbar-menu-item">首页 </a>
-
-        <a href="/archives" class="navbar-menu-item">归档 </a>
-
-        <a href="/tags" class="navbar-menu-item">标签 </a>
-
-        <a href="/categories" class="navbar-menu-item">分类 </a>
-
-        <a href="/about" class="navbar-menu-item">关于 </a>
-
-        <a href="/links" class="navbar-menu-item">友链 </a>
-
-        <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
-      </div>
-    </nav>
-
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/img/Kaze.jpg">
+      
+      <span class="navbar-logo-dsc">小杨的博客</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
     <div class="section-wrap">
       <div class="container">
         <div class="columns">
           <main class="main-column">
-            <div class="card">
+<div class="card">
+  
+  <article class="card card-content">
+    <a href="/2021/06/25/面试题描述方式介绍/">
+      <h1 class="post-title">
+        
+      </h1>
+    </a>
+    <div class="card-excerpt">
+      
+      
+      
+    </div>
+    <div class="card-post-footer">
+      <div class="post-meta">
+        <time datetime="2021-06-25T00:36:33.749Z" style="display: flex; align-items: center;">
+          <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+          <span>2021-06-25</span>
+        </time>
+        
+        
+        <span class="dot"></span>
+        <span>2k 字</span>
+        
+      </div>
+      <a href="/2021/06/25/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8F%8F%E8%BF%B0%E6%96%B9%E5%BC%8F%E4%BB%8B%E7%BB%8D/">继续阅读 </a>
+    </div>
+  </article>
+</div>
 
-              <article class="card card-content">
-                <a href="/2021/06/25/面试题描述方式介绍/">
-                  <h1 class="post-title">
-                    面试题描述方式介绍
-                  </h1>
-                </a>
-                <div class="card-excerpt">
-                  面试题描述方式介绍
-
-
-                </div>
-                <div class="card-post-footer">
-                  <div class="post-meta">
-                    <time datetime="2021-06-25T00:36:33.749Z" style="display: flex; align-items: center;">
-                      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
-                      <span>2021-06-25</span>
-                    </time>
-
-
-                    <span class="dot"></span>
-                    <span>2k 字</span>
-
-                  </div>
-                  <a
-                    href="/2021/06/25/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8F%8F%E8%BF%B0%E6%96%B9%E5%BC%8F%E4%BB%8B%E7%BB%8D/">继续阅读
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            
-
-          </main>
+</main>
           <aside class="left-column">
-
+            
             <div class="card card-author">
+              
+<img src="/img/Kaze.jpg" class="author-img">
 
-              <img src="/img/Kaze.png" class="author-img">
-
-              <p class="author-name">小杨的博客</p>
-              <p class="author-description">designed by theme-kaze</p>
-              <div class="author-message">
-                <a class="author-posts-count" href="/archives">
-                  <span>2</span>
-                  <span>文章</span>
-                </a>
-                <a class="author-categories-count" href="/categories">
-                  <span>0</span>
-                  <span>分类</span>
-                </a>
-                <a class="author-tags-count" href="/tags">
-                  <span>0</span>
-                  <span>标签</span>
-                </a>
-              </div>
+<p class="author-name">是小杨啊</p>
+<p class="author-description">这个世界坏人都在装</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>1</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>0</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>0</span>
+    <span>标签</span>
+  </a>
+</div>
 
             </div>
-
+            
             <div class="sticky-tablet">
-
-
-
-              <article class="card card-content">
-                <div class="categories-card">
-                  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类
-                  </div>
-                  <div class="categories-list">
-
-                  </div>
-                </div>
-              </article>
-
-              <article class="card card-content">
-                <div class="tags-card">
-                  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
-                  <div class="tags-list">
-
-                  </div>
-                </div>
-              </article>
-
-
-              <article class="card card-content widescreen-archive">
-                <div class="archive-card">
-                  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao"
-                      style="padding-right: 2px;"></i>归档</div>
-                  <div class="archive-card-list">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <a href="/archives/2021" class="archive-card-list-item">
-                      2021
-                      <span class="archive-card-list-item-badge">2</span>
-                    </a>
-
-                  </div>
-                </div>
-              </article>
-
-            </div>
+  
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+  </div>
+</div>
+  </article>
+  
+  
+  <article class="card card-content widescreen-archive">
+    <div class="archive-card">
+  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao" style="padding-right: 2px;"></i>归档</div>
+  <div class="archive-card-list">
+    
+    
+    
+      
+        
+        
+        
+      
+    
+    
+      <a href="/archives/2021" class="archive-card-list-item">
+          2021
+          <span class="archive-card-list-item-badge">1</span>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+</div>
           </aside>
           <aside class="right-column">
             <div class="sticky-widescreen">
-
-
-
-              <article class="card card-content">
-                <div class="recent-posts-card">
-                  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban"
-                      style="padding-right: 2px;"></i>最近文章</div>
-                  <div class="recent-posts-list">
-
-                    <div class="recent-posts-item">
-                      <div class="recent-posts-item-title">2021-06-25</div>
-                      <a href="/2021/06/25/面试题描述方式介绍/">
-                        <div class="recent-posts-item-content">面试题描述方式介绍</div>
-                      </a>
-                    </div>
-
-
-                  </div>
-                </div>
-              </article>
-
-
-              <article class="card card-content">
-                <div class="archive-card">
-                  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao"
-                      style="padding-right: 2px;"></i>归档</div>
-                  <div class="archive-card-list">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <a href="/archives/2021" class="archive-card-list-item">
-                      2021
-                      <span class="archive-card-list-item-badge">2</span>
-                    </a>
-
-                  </div>
-                </div>
-              </article>
-
-            </div>
+  
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-06-25</div>
+        <a href="/2021/06/25/面试题描述方式介绍/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="archive-card">
+  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao" style="padding-right: 2px;"></i>归档</div>
+  <div class="archive-card-list">
+    
+    
+    
+      
+        
+        
+        
+      
+    
+    
+      <a href="/archives/2021" class="archive-card-list-item">
+          2021
+          <span class="archive-card-list-item-badge">1</span>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+</div>
           </aside>
         </div>
       </div>
     </div>
   </div>
-
+  
   <footer class="footer">
-    <div class="footer-container">
-      <div>
-        <div class="footer-dsc">
-          <span>Copyright ©
-
-            2020 -
-
-            2021
-          </span>
-          <a href="/" class="footer-link">theme-kaze demo </a>
-        </div>
-      </div>
-
-
+  <div class="footer-container">
+    <div>
       <div class="footer-dsc">
-
-
-        Powered by
-        <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo
-        </a>
-
-
-        <span>&nbsp;|&nbsp;</span>
-
-
-
-        Theme -
-        <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
-          rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
-
+        <span>Copyright ©
+          
+          2020 -
+          
+          2021
+        </span>
+        <a href="/" class="footer-link">小杨的博客 </a>
       </div>
+    </div>
 
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+        <span>&nbsp;|&nbsp;</span>
+        
+        
+        本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
 
-
-
-  </footer>
-  <a role="button" id="scrollbutton" class="basebutton">
-    <i class="iconfont icon-arrowleft button-icon"></i>
-  </a>
-  <a role="button" id="menubutton" class="basebutton">
-    <i class="iconfont icon-menu button-icon"></i>
-  </a>
-  <a role="button" id="popbutton" class="basebutton">
-    <i class="iconfont icon-expand button-icon"></i>
-  </a>
-  <a role="button" id="darkbutton" class="basebutton darkwidget">
-    <i class="iconfont icon-weather button-icon"></i>
-  </a>
-
-
-
-
+  
+  
+  
   <script>
-    var addImgLayout = function () {
-      var img = document.querySelectorAll('.post-content img');
-      var i;
-      for (i = 0; i < img.length; i++) {
-        var wrapper = document.createElement('a');
-        wrapper.setAttribute('data-fslightbox', 'gallery');
-        wrapper.setAttribute('href', img[i].getAttribute('data-src'));
-        wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
-        img[i].parentElement.insertBefore(wrapper, img[i]);
-        wrapper.appendChild(img[i]);
-      }
-      refreshFsLightbox();
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
     }
-  </script>
-  <script>
-    loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)
-  </script>
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
 
-
-
-  <script src="/js/main.js"></script>
-
-
-
+  
+  <script>loadScript("/js/lib/busuanzi.min.js")</script>
+  
+  
   <script>
     var addLazyload = function () {
       var observer = lozad('.lozad', {
@@ -395,11 +386,9 @@
       observer.observe();
     }
   </script>
-  <script>
-    loadScript("/js/lib/lozad.min.js", addLazyload)
-  </script>
-
-
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
 </body>
 
 </html>
