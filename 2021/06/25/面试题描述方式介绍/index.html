@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<meta  lang="zh-CN" >
+<meta lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -20,15 +21,15 @@
       light: '#fff'
     }
     // get the data of css prefers-color-scheme
-    var getCssMediaQuery = function() {
+    var getCssMediaQuery = function () {
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     };
     // reverse current darkmode setting function
-    var reverseDarkModeSetting = function() {
+    var reverseDarkModeSetting = function () {
       var setting = localStorage.getItem('user-color-scheme');
-      if(reverseDarkList[setting]) {
+      if (reverseDarkList[setting]) {
         setting = reverseDarkList[setting];
-      } else if(setting === null) {
+      } else if (setting === null) {
         setting = reverseDarkList[getCssMediaQuery()];
       } else {
         return;
@@ -37,13 +38,13 @@
       return setting;
     };
     // apply current darkmode setting
-    var setDarkmode = function(mode) {
+    var setDarkmode = function (mode) {
       var setting = mode || localStorage.getItem('user-color-scheme');
-      if(setting === getCssMediaQuery()) {
+      if (setting === getCssMediaQuery()) {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[setting];
-      } else if(reverseDarkList[setting]) {
+      } else if (reverseDarkList[setting]) {
         document.documentElement.setAttribute('data-user-color-scheme', setting);
         document.getElementById('theme-color').content = themeColor[setting];
       } else {
@@ -63,403 +64,528 @@
       document.body.appendChild(script);
     }
   </script>
-  
-  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
-  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
-  
+
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style">
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style">
+
   <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
-  
-  
+
+
   <link rel="preload" href="/js/lib/lozad.min.js" as="script">
-  
-  
-  
-  
-  
-  
-  
-  
-<link rel="stylesheet" href="/css/main.css">
 
-  
-  
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
 
-  
-  
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
 
-  
-  
-  
-<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+
+  <link rel="stylesheet" href="/css/main.css">
+
+
+
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+
+
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+
+
+
+  <meta name="generator" content="Hexo 5.4.0">
+</head>
 
 
 <body>
   <div class="wrapper">
-    
+
     <nav class="navbar">
-  <div class="navbar-logo">
-    <span class="navbar-logo-main">
-      
-      <img class="navbar-logo-img" src="/img/Kaze.jpg">
-      
-      <span class="navbar-logo-dsc">小杨的博客</span>
-    </span>
-  </div>
-  <div class="navbar-menu">
-    
-    <a href="/" class="navbar-menu-item">首页 </a>
-    
-    <a href="/archives" class="navbar-menu-item">归档 </a>
-    
-    <a href="/tags" class="navbar-menu-item">标签 </a>
-    
-    <a href="/categories" class="navbar-menu-item">分类 </a>
-    
-    <a href="/about" class="navbar-menu-item">关于 </a>
-    
-    <a href="/links" class="navbar-menu-item">友链 </a>
-    
-    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
-  </div>
-</nav>
-    
+      <div class="navbar-logo">
+        <span class="navbar-logo-main">
+
+          <img class="navbar-logo-img" src="/img/Kaze.jpg">
+
+          <span class="navbar-logo-dsc">小杨的博客</span>
+        </span>
+      </div>
+      <div class="navbar-menu">
+
+        <a href="/" class="navbar-menu-item">首页 </a>
+
+        <a href="/archives" class="navbar-menu-item">归档 </a>
+
+        <a href="/tags" class="navbar-menu-item">标签 </a>
+
+        <a href="/categories" class="navbar-menu-item">分类 </a>
+
+        <a href="/about" class="navbar-menu-item">关于 </a>
+
+        <a href="/links" class="navbar-menu-item">友链 </a>
+
+        <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+      </div>
+    </nav>
+
     <div class="section-wrap">
       <div class="container">
         <div class="columns">
           <main class="main-column">
-<article class="card card-content">
-  <header>
-    <h1 class="post-title">
-      
-    </h1>
-  </header>
-  <div class="post-meta post-show-meta">
-    <time datetime="2021-06-25T00:36:33.749Z" style="display: flex; align-items: center;">
-      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
-      <span>2021-06-25</span>
-    </time>
-    
-    
-    <span class="dot"></span>
-    <span>2k 字</span>
-    
-  </div>
-  
-  </header>
-  <div id="section" class="post-content">
-    <img src="02-线上面试题/images/02.png" style="zoom:150%;" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="02-线上面试题/images/02.png" class="lozad post-image">
+            <article class="card card-content">
+              <header>
+                <h1 class="post-title">
+                  面试题描述方式介绍
+                </h1>
+              </header>
+              <div class="post-meta post-show-meta">
+                <time datetime="2021-06-25T00:36:33.749Z" style="display: flex; align-items: center;">
+                  <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+                  <span>2021-06-25</span>
+                </time>
 
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
-<li>技术是一个持续积累的过程,希望大家利用接下来的时间,有意识的去把自己技术点进行沉淀,尽早树立自己的知识体系</li>
-<li>接下来整理了一些面试题相关和面试中需要注意的事宜,请认真阅读</li>
-</ul>
-<h3 id="1-如何准备面试题"><a href="#1-如何准备面试题" class="headerlink" title="1- 如何准备面试题?"></a>1- 如何准备面试题?</h3><ul>
-<li>可以根据课上知识点准备面试题,可以划分阶段,基于课上内容,结合’**面试宝典’**来整体梳理准备面试题</li>
-<li><strong>注意事项</strong>: 面试题有非常多的途径,但是一定首先基于课上内容,提升自己的代码量,课上的吸收了,然后可以结合面试宝典提示对当前知识点的理解深入</li>
-</ul>
-<h3 id="2-我该如何分配时间"><a href="#2-我该如何分配时间" class="headerlink" title="2- 我该如何分配时间?"></a>2- 我该如何分配时间?</h3><ul>
-<li><p>可以利用中午午休时间,以及晚自习完成当天作业后的时间准备面试题,原则上一天看的面试题不少于5-10道题</p>
-</li>
-<li><p><strong>注意事项:</strong> </p>
-<ul>
-<li> <strong>需要制定计划</strong>: 按照阶段的方式来准备面试宝典,比如用4天的时间把javaScript基础阶段准备完毕</li>
-<li><strong>需要注重过程</strong>: 不要只是单纯的看,要去记忆,可以用本可以用文档尝试着对一个知识点进行描述,有帮助我们的理解</li>
-<li><strong>要有最后结果</strong>: 通过以上两个步骤,那就会产出最后的结果,最后的结果就是当我在问你的时候,你会不会回答的上来?能不能把知识点描述清楚?</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-该如何描述知识点"><a href="#3-该如何描述知识点" class="headerlink" title="3- 该如何描述知识点?"></a>3- 该如何描述知识点?</h3><ul>
-<li>想要更好的描述知识点,首先要充分理解当前知识点核心意思,这样无论怎么问,都能回答上来</li>
-<li>但是,个人情况不同,也可以结合<strong>最新面试宝典</strong>上的描述作为参考的范围,可以提升理解深度</li>
-<li>描述知识点可以根据小组为单位,进行语音之间一对一的问答,等到休息时,我也会进行突击的语音电话检查</li>
-<li>平时也可以采用<strong>录音</strong>的方式来对一个知识点进行描述和回答,如果有把握不准的地方也可以私下发我进行交流</li>
-</ul>
-<h3 id="4-现在面试官想要听到什么样的回答"><a href="#4-现在面试官想要听到什么样的回答" class="headerlink" title="4- 现在面试官想要听到什么样的回答?"></a>4- 现在面试官想要听到什么样的回答?</h3><ul>
-<li><p>首先面试官问问题的方式大致是这样的顺序:</p>
-</li>
-<li><p>第一种:</p>
-<ul>
-<li>问: 请描述一下什么是闭包函数?</li>
-<li>答: 两个函数嵌套,就形成了闭包函数….</li>
-<li>问: 那你和我说一下为什么要嵌套?</li>
-<li>答: 因为延长变量的作用时间…..</li>
-<li>问: 那会带来什么问题?</li>
-<li>答: …..</li>
-<li>问: 在以前的工作中有没有用过闭包函数?都用它实现过什么?</li>
-<li>答: mmp….</li>
-</ul>
-</li>
-<li><p>第二种:</p>
-<ul>
-<li>问: 什么情况下会引起内存泄漏?</li>
-<li>答: ……..闭包函数?</li>
-<li>问: 为什么?</li>
-<li>答: 因为闭包函数在内存中无法销毁,额….</li>
-<li>问: 嗯…..好吧?还有吗?</li>
-<li>答: …..dnmd…盲区了….好像在哪里看过,怎么突然不记得了,,,,王德发?????</li>
-<li>问: 好吧,那我们下一个问题………..</li>
-</ul>
-<p>![](02-线上面试题/images/ys (1).webp)</p>
-</li>
-</ul>
-<ul>
-<li><p>通过以上的场景我们会感受到,现在的面试问问题的方式,习惯由一个点继续向深处延伸,而且还会反着去问一个问题,所以如果对一个问题了解的不够深入,只停留在表面,那么就很容易尴尬</p>
-</li>
-<li><p><strong>总结一:</strong> 所以,在我们去看面试宝典的时候,也需要加入自己的理解和个人的解释,并且一定要去发现周边延伸和涉及的知识点,这样最后的结果不仅仅我们掌握了当前的核心知识点,同时对于周边延伸的知识点也掌握了</p>
-</li>
-<li><p><strong>总结二:</strong> 通过上面的模拟场景,发现其实我们和面试官都在互相之间交流,但是也需要注意一个点,就是等着人家问,保持一个良好的互动场景,尽量不自己主动抛出一个自己未知的问题方向,</p>
-<ul>
-<li><p>正确示范:</p>
-<ul>
-<li>问: 说一下你理解的js吧</li>
-<li>答: 首先js分为DOM和BOM,主要实现与用户之间的交互,并且也可以运行在服务端上,比如NodeJS我就有一些简单的理解,在闲暇之余我自学过一些基础的语法</li>
-<li>面试官: 哎呦,,可以啊,还知道一些Nodejs,还是自己私下学的,有点意思,你Nodejs掌握到什么水平了?有没有自己研究过一些Demo什么的?</li>
-<li>答: 有简单的写过一个本地的服务,用的是基于express实现的服务,主要用于模拟数据,测试功能</li>
-<li>面试官: 内心: 真Good哇,还非常的客来碗儿呢~</li>
-</ul>
-</li>
-<li><p>错误示范:</p>
-<ul>
-<li><p>问: 说一下你理解的js吧</p>
-</li>
-<li><p>答: 首先js分为DOM和BOM,主要实现与用户之间的交互,并且也可以运行在服务端上,比如NodeJS啊什么的,和java也差不多…等等</p>
-</li>
-<li><p>问: 秃然眼前一亮,我就是Java出身,那么好,我们聊聊Java吧,我看你对java有了解,那我们聊聊HashMap的实现原理吧?</p>
-</li>
-<li><p>答: …..mmp</p>
-</li>
-</ul>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/Fsi.jpg" class="lozad post-image"src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/Fsi.jpg"></p>
-</li>
-</ul>
-</li>
-<li><p><strong>总结:</strong></p>
-<ul>
-<li>可以发现第一种问答的方式,毫无疑问是正确的,并且能够给面试官留下,有自学的能力,不仅限于自己的知识范畴内使用,作为我们个人来说,主动”<strong>引导</strong>“面试官的话题,毫无疑问是我们能够说的清楚,讲的明白的一个知识方向,这样的面试方式,能最大程度的给面试官留下较为深刻的印象</li>
-<li>第二种的问题就是在于,完全给自己挖坑,然后自己跳坑的一个过程,只是单纯的举例,如果你对后端的语言,能够有很大的把握和面试官说清楚,那么也是一个优秀的点</li>
-</ul>
-</li>
-</ul>
-<h3 id="5-关于功能点话述和整理"><a href="#5-关于功能点话述和整理" class="headerlink" title="5- 关于功能点话述和整理"></a>5- 关于功能点话述和整理</h3><ul>
-<li><p>现在我们已经接触到了项目,所谓的项目就是将多个功能点进行整合,最后实现一个具备多种<strong>功能模块</strong>的完整企业级项目</p>
-</li>
-<li><p>在课上接触到的项目,一定要把功能点进行分析记录,例如: 如何去实现一个简单的登录功能,的完整流程是什么?需要考虑什么问题?有没有遇到过印象深刻的问题等等</p>
-</li>
-<li><p>在日常的生活中,使用相关网站以及APP时,需要有意识的去看功能点的实现,比如,浏览京东时**/从选中商品/查看详情/加入购车/检查是否处于登录状态/点击商品数量/单价变化/总价变化/全选反选/促销优惠/配送地区/清理购物车…**</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/JD-%E8%B4%AD%E7%89%A9%E8%BD%A6.png" class="lozad post-image"src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/JD-%E8%B4%AD%E7%89%A9%E8%BD%A6.png"></p>
-</li>
-<li><p>以上都是我们平常生活中浏览网站时最平常的操作,那么作为一个优秀的的<strong>前端开发工程师</strong>,就需要提前具备这些功能的分析能力,把之前的注意点,现在要平移到如何实现?功能都有哪些?</p>
-</li>
-<li><p>以上想说明白一点:现在大家闲暇之余,不要只是为了浏览网站而浏览网站,要有一些工程师思维了</p>
-</li>
-</ul>
-<h3 id="6-最后在啰嗦几句"><a href="#6-最后在啰嗦几句" class="headerlink" title="6- 最后在啰嗦几句"></a>6- 最后在啰嗦几句</h3><ul>
-<li>面试是大家都必须要经历的一个过程,每个人都会遇到,所以要提前的准备,增加自己的知识储备</li>
-<li>技术不是一嘴吃个大胖子,重要的还是基于课上知识的吸收和沉淀,一定要勤于思考,要有主动性,一定要勤快</li>
-<li>金句良言,大家千万不要做那种”<strong>人比猪懒,心比天高</strong>“的人,一定要脚踏实地,把当前的每一件事都踏实的做好</li>
-</ul>
 
-  </div>
-  <div>
-  
-  <div class="post-note note-warning copyright" style="margin-top: 42px">
-    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/about">是小杨啊</a></p>
-    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/2021/06/25/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8F%8F%E8%BF%B0%E6%96%B9%E5%BC%8F%E4%BB%8B%E7%BB%8D/">http://example.com/2021/06/25/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8F%8F%E8%BF%B0%E6%96%B9%E5%BC%8F%E4%BB%8B%E7%BB%8D/</a></p>
-    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
-  </div>
-  
-  </div>
-</article>
-<div class="nav">
-  
-  
-</div>
+                <span class="dot"></span>
+                <span>2k 字</span>
 
-<div class="card card-content toc-card" id="mobiletoc">
-  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">1- 如何准备面试题?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E6%97%B6%E9%97%B4"><span class="toc-text">2- 我该如何分配时间?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AF%A5%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">3- 该如何描述知识点?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%8E%B0%E5%9C%A8%E9%9D%A2%E8%AF%95%E5%AE%98%E6%83%B3%E8%A6%81%E5%90%AC%E5%88%B0%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%9B%9E%E7%AD%94"><span class="toc-text">4- 现在面试官想要听到什么样的回答?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%85%B3%E4%BA%8E%E5%8A%9F%E8%83%BD%E7%82%B9%E8%AF%9D%E8%BF%B0%E5%92%8C%E6%95%B4%E7%90%86"><span class="toc-text">5- 关于功能点话述和整理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%9C%80%E5%90%8E%E5%9C%A8%E5%95%B0%E5%97%A6%E5%87%A0%E5%8F%A5"><span class="toc-text">6- 最后在啰嗦几句</span></a></li></ol>
-</div></main>
-          <aside class="left-column">
-            
-            <div class="card card-author">
-              
-<img src="/img/Kaze.jpg" class="author-img">
+              </div>
 
-<p class="author-name">是小杨啊</p>
-<p class="author-description">这个世界坏人都在装</p>
-<div class="author-message">
-  <a class="author-posts-count" href="/archives">
-    <span>1</span>
-    <span>文章</span>
-  </a>
-  <a class="author-categories-count" href="/categories">
-    <span>0</span>
-    <span>分类</span>
-  </a>
-  <a class="author-tags-count" href="/tags">
-    <span>0</span>
-    <span>标签</span>
-  </a>
-</div>
+              </header>
+              <div id="section" class="post-content">
+                <img src="02-线上面试题/images/02.png" style="zoom:150%;" /
+                  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+                  data-src="02-线上面试题/images/02.png" class="lozad post-image">
+
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3>
+                <ul>
+                  <li>技术是一个持续积累的过程,希望大家利用接下来的时间,有意识的去把自己技术点进行沉淀,尽早树立自己的知识体系</li>
+                  <li>接下来整理了一些面试题相关和面试中需要注意的事宜,请认真阅读</li>
+                </ul>
+                <h3 id="1-如何准备面试题"><a href="#1-如何准备面试题" class="headerlink" title="1- 如何准备面试题?"></a>1- 如何准备面试题?</h3>
+                <ul>
+                  <li>可以根据课上知识点准备面试题,可以划分阶段,基于课上内容,结合’**面试宝典’**来整体梳理准备面试题</li>
+                  <li><strong>注意事项</strong>: 面试题有非常多的途径,但是一定首先基于课上内容,提升自己的代码量,课上的吸收了,然后可以结合面试宝典提示对当前知识点的理解深入</li>
+                </ul>
+                <h3 id="2-我该如何分配时间"><a href="#2-我该如何分配时间" class="headerlink" title="2- 我该如何分配时间?"></a>2- 我该如何分配时间?</h3>
+                <ul>
+                  <li>
+                    <p>可以利用中午午休时间,以及晚自习完成当天作业后的时间准备面试题,原则上一天看的面试题不少于5-10道题</p>
+                  </li>
+                  <li>
+                    <p><strong>注意事项:</strong> </p>
+                    <ul>
+                      <li> <strong>需要制定计划</strong>: 按照阶段的方式来准备面试宝典,比如用4天的时间把javaScript基础阶段准备完毕</li>
+                      <li><strong>需要注重过程</strong>: 不要只是单纯的看,要去记忆,可以用本可以用文档尝试着对一个知识点进行描述,有帮助我们的理解</li>
+                      <li><strong>要有最后结果</strong>: 通过以上两个步骤,那就会产出最后的结果,最后的结果就是当我在问你的时候,你会不会回答的上来?能不能把知识点描述清楚?</li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3 id="3-该如何描述知识点"><a href="#3-该如何描述知识点" class="headerlink" title="3- 该如何描述知识点?"></a>3- 该如何描述知识点?</h3>
+                <ul>
+                  <li>想要更好的描述知识点,首先要充分理解当前知识点核心意思,这样无论怎么问,都能回答上来</li>
+                  <li>但是,个人情况不同,也可以结合<strong>最新面试宝典</strong>上的描述作为参考的范围,可以提升理解深度</li>
+                  <li>描述知识点可以根据小组为单位,进行语音之间一对一的问答,等到休息时,我也会进行突击的语音电话检查</li>
+                  <li>平时也可以采用<strong>录音</strong>的方式来对一个知识点进行描述和回答,如果有把握不准的地方也可以私下发我进行交流</li>
+                </ul>
+                <h3 id="4-现在面试官想要听到什么样的回答"><a href="#4-现在面试官想要听到什么样的回答" class="headerlink"
+                    title="4- 现在面试官想要听到什么样的回答?"></a>4- 现在面试官想要听到什么样的回答?</h3>
+                <ul>
+                  <li>
+                    <p>首先面试官问问题的方式大致是这样的顺序:</p>
+                  </li>
+                  <li>
+                    <p>第一种:</p>
+                    <ul>
+                      <li>问: 请描述一下什么是闭包函数?</li>
+                      <li>答: 两个函数嵌套,就形成了闭包函数….</li>
+                      <li>问: 那你和我说一下为什么要嵌套?</li>
+                      <li>答: 因为延长变量的作用时间…..</li>
+                      <li>问: 那会带来什么问题?</li>
+                      <li>答: …..</li>
+                      <li>问: 在以前的工作中有没有用过闭包函数?都用它实现过什么?</li>
+                      <li>答: mmp….</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>第二种:</p>
+                    <ul>
+                      <li>问: 什么情况下会引起内存泄漏?</li>
+                      <li>答: ……..闭包函数?</li>
+                      <li>问: 为什么?</li>
+                      <li>答: 因为闭包函数在内存中无法销毁,额….</li>
+                      <li>问: 嗯…..好吧?还有吗?</li>
+                      <li>答: …..dnmd…盲区了….好像在哪里看过,怎么突然不记得了,,,,王德发?????</li>
+                      <li>问: 好吧,那我们下一个问题………..</li>
+                    </ul>
+                    <p>![](02-线上面试题/images/ys (1).webp)</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <p>通过以上的场景我们会感受到,现在的面试问问题的方式,习惯由一个点继续向深处延伸,而且还会反着去问一个问题,所以如果对一个问题了解的不够深入,只停留在表面,那么就很容易尴尬</p>
+                  </li>
+                  <li>
+                    <p><strong>总结一:</strong>
+                      所以,在我们去看面试宝典的时候,也需要加入自己的理解和个人的解释,并且一定要去发现周边延伸和涉及的知识点,这样最后的结果不仅仅我们掌握了当前的核心知识点,同时对于周边延伸的知识点也掌握了</p>
+                  </li>
+                  <li>
+                    <p><strong>总结二:</strong>
+                      通过上面的模拟场景,发现其实我们和面试官都在互相之间交流,但是也需要注意一个点,就是等着人家问,保持一个良好的互动场景,尽量不自己主动抛出一个自己未知的问题方向,</p>
+                    <ul>
+                      <li>
+                        <p>正确示范:</p>
+                        <ul>
+                          <li>问: 说一下你理解的js吧</li>
+                          <li>答: 首先js分为DOM和BOM,主要实现与用户之间的交互,并且也可以运行在服务端上,比如NodeJS我就有一些简单的理解,在闲暇之余我自学过一些基础的语法</li>
+                          <li>面试官: 哎呦,,可以啊,还知道一些Nodejs,还是自己私下学的,有点意思,你Nodejs掌握到什么水平了?有没有自己研究过一些Demo什么的?</li>
+                          <li>答: 有简单的写过一个本地的服务,用的是基于express实现的服务,主要用于模拟数据,测试功能</li>
+                          <li>面试官: 内心: 真Good哇,还非常的客来碗儿呢~</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>错误示范:</p>
+                        <ul>
+                          <li>
+                            <p>问: 说一下你理解的js吧</p>
+                          </li>
+                          <li>
+                            <p>答: 首先js分为DOM和BOM,主要实现与用户之间的交互,并且也可以运行在服务端上,比如NodeJS啊什么的,和java也差不多…等等</p>
+                          </li>
+                          <li>
+                            <p>问: 秃然眼前一亮,我就是Java出身,那么好,我们聊聊Java吧,我看你对java有了解,那我们聊聊HashMap的实现原理吧?</p>
+                          </li>
+                          <li>
+                            <p>答: …..mmp</p>
+                          </li>
+                        </ul>
+                        <p><img
+                            srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+                            data-src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/Fsi.jpg"
+                            class="lozad post-image"
+                            src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/Fsi.jpg"></p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>总结:</strong></p>
+                    <ul>
+                      <li>
+                        可以发现第一种问答的方式,毫无疑问是正确的,并且能够给面试官留下,有自学的能力,不仅限于自己的知识范畴内使用,作为我们个人来说,主动”<strong>引导</strong>“面试官的话题,毫无疑问是我们能够说的清楚,讲的明白的一个知识方向,这样的面试方式,能最大程度的给面试官留下较为深刻的印象
+                      </li>
+                      <li>第二种的问题就是在于,完全给自己挖坑,然后自己跳坑的一个过程,只是单纯的举例,如果你对后端的语言,能够有很大的把握和面试官说清楚,那么也是一个优秀的点</li>
+                    </ul>
+                  </li>
+                </ul>
+                <h3 id="5-关于功能点话述和整理"><a href="#5-关于功能点话述和整理" class="headerlink" title="5- 关于功能点话述和整理"></a>5- 关于功能点话述和整理
+                </h3>
+                <ul>
+                  <li>
+                    <p>现在我们已经接触到了项目,所谓的项目就是将多个功能点进行整合,最后实现一个具备多种<strong>功能模块</strong>的完整企业级项目</p>
+                  </li>
+                  <li>
+                    <p>在课上接触到的项目,一定要把功能点进行分析记录,例如: 如何去实现一个简单的登录功能,的完整流程是什么?需要考虑什么问题?有没有遇到过印象深刻的问题等等</p>
+                  </li>
+                  <li>
+                    <p>
+                      在日常的生活中,使用相关网站以及APP时,需要有意识的去看功能点的实现,比如,浏览京东时**/从选中商品/查看详情/加入购车/检查是否处于登录状态/点击商品数量/单价变化/总价变化/全选反选/促销优惠/配送地区/清理购物车…**
+                    </p>
+                    <p><img
+                        srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+                        data-src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/JD-%E8%B4%AD%E7%89%A9%E8%BD%A6.png"
+                        class="lozad post-image"
+                        src="02-%E7%BA%BF%E4%B8%8A%E9%9D%A2%E8%AF%95%E9%A2%98/images/JD-%E8%B4%AD%E7%89%A9%E8%BD%A6.png">
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      以上都是我们平常生活中浏览网站时最平常的操作,那么作为一个优秀的的<strong>前端开发工程师</strong>,就需要提前具备这些功能的分析能力,把之前的注意点,现在要平移到如何实现?功能都有哪些?
+                    </p>
+                  </li>
+                  <li>
+                    <p>以上想说明白一点:现在大家闲暇之余,不要只是为了浏览网站而浏览网站,要有一些工程师思维了</p>
+                  </li>
+                </ul>
+                <h3 id="6-最后在啰嗦几句"><a href="#6-最后在啰嗦几句" class="headerlink" title="6- 最后在啰嗦几句"></a>6- 最后在啰嗦几句</h3>
+                <ul>
+                  <li>面试是大家都必须要经历的一个过程,每个人都会遇到,所以要提前的准备,增加自己的知识储备</li>
+                  <li>技术不是一嘴吃个大胖子,重要的还是基于课上知识的吸收和沉淀,一定要勤于思考,要有主动性,一定要勤快</li>
+                  <li>金句良言,大家千万不要做那种”<strong>人比猪懒,心比天高</strong>“的人,一定要脚踏实地,把当前的每一件事都踏实的做好</li>
+                </ul>
+
+              </div>
+              <div>
+
+                <div class="post-note note-warning copyright" style="margin-top: 42px">
+                  <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer"
+                      href="http://example.com/about">是小杨啊</a></p>
+                  <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer"
+                      href=""></a></p>
+                  <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="">CC BY-NC-SA
+                      4.0 协议</a>。转载请注明出处！</p>
+                </div>
+
+              </div>
+            </article>
+            <div class="nav">
+
 
             </div>
-            
+
+            <div class="card card-content toc-card" id="mobiletoc">
+              <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+              <ol class="toc">
+                <li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span
+                      class="toc-text">前言</span></a></li>
+                <li class="toc-item toc-level-3"><a class="toc-link"
+                    href="#1-%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">1-
+                      如何准备面试题?</span></a></li>
+                <li class="toc-item toc-level-3"><a class="toc-link"
+                    href="#2-%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E6%97%B6%E9%97%B4"><span
+                      class="toc-text">2- 我该如何分配时间?</span></a></li>
+                <li class="toc-item toc-level-3"><a class="toc-link"
+                    href="#3-%E8%AF%A5%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E7%9F%A5%E8%AF%86%E7%82%B9"><span
+                      class="toc-text">3- 该如何描述知识点?</span></a></li>
+                <li class="toc-item toc-level-3"><a class="toc-link"
+                    href="#4-%E7%8E%B0%E5%9C%A8%E9%9D%A2%E8%AF%95%E5%AE%98%E6%83%B3%E8%A6%81%E5%90%AC%E5%88%B0%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%9B%9E%E7%AD%94"><span
+                      class="toc-text">4- 现在面试官想要听到什么样的回答?</span></a></li>
+                <li class="toc-item toc-level-3"><a class="toc-link"
+                    href="#5-%E5%85%B3%E4%BA%8E%E5%8A%9F%E8%83%BD%E7%82%B9%E8%AF%9D%E8%BF%B0%E5%92%8C%E6%95%B4%E7%90%86"><span
+                      class="toc-text">5- 关于功能点话述和整理</span></a></li>
+                <li class="toc-item toc-level-3"><a class="toc-link"
+                    href="#6-%E6%9C%80%E5%90%8E%E5%9C%A8%E5%95%B0%E5%97%A6%E5%87%A0%E5%8F%A5"><span class="toc-text">6-
+                      最后在啰嗦几句</span></a></li>
+              </ol>
+            </div>
+          </main>
+          <aside class="left-column">
+
+            <div class="card card-author">
+
+              <img src="/img/Kaze.jpg" class="author-img">
+
+              <p class="author-name">是小杨啊</p>
+              <p class="author-description">这个世界坏人都在装</p>
+              <div class="author-message">
+                <a class="author-posts-count" href="/archives">
+                  <span>1</span>
+                  <span>文章</span>
+                </a>
+                <a class="author-categories-count" href="/categories">
+                  <span>0</span>
+                  <span>分类</span>
+                </a>
+                <a class="author-tags-count" href="/tags">
+                  <span>0</span>
+                  <span>标签</span>
+                </a>
+              </div>
+
+            </div>
+
             <div class="sticky-tablet">
-  
-  
-  <article class="display-when-two-columns spacer">
-    <div class="card card-content toc-card">
-      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">1- 如何准备面试题?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E6%97%B6%E9%97%B4"><span class="toc-text">2- 我该如何分配时间?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AF%A5%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">3- 该如何描述知识点?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%8E%B0%E5%9C%A8%E9%9D%A2%E8%AF%95%E5%AE%98%E6%83%B3%E8%A6%81%E5%90%AC%E5%88%B0%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%9B%9E%E7%AD%94"><span class="toc-text">4- 现在面试官想要听到什么样的回答?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%85%B3%E4%BA%8E%E5%8A%9F%E8%83%BD%E7%82%B9%E8%AF%9D%E8%BF%B0%E5%92%8C%E6%95%B4%E7%90%86"><span class="toc-text">5- 关于功能点话述和整理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%9C%80%E5%90%8E%E5%9C%A8%E5%95%B0%E5%97%A6%E5%87%A0%E5%8F%A5"><span class="toc-text">6- 最后在啰嗦几句</span></a></li></ol>
-    </div>
-  </article>
-  
-  
-  <article class="card card-content">
-    <div class="categories-card">
-  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
-  <div class="categories-list">
-    
-  </div>
-</div>
-  </article>
-  
-  <article class="card card-content">
-    <div class="tags-card">
-  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
-  <div class="tags-list">
-    
-  </div>
-</div>
-  </article>
-  
-  
-</div>
+
+
+              <article class="display-when-two-columns spacer">
+                <div class="card card-content toc-card">
+                  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+                  <ol class="toc">
+                    <li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span
+                          class="toc-text">前言</span></a></li>
+                    <li class="toc-item toc-level-3"><a class="toc-link"
+                        href="#1-%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95%E9%A2%98"><span
+                          class="toc-text">1- 如何准备面试题?</span></a></li>
+                    <li class="toc-item toc-level-3"><a class="toc-link"
+                        href="#2-%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E6%97%B6%E9%97%B4"><span
+                          class="toc-text">2- 我该如何分配时间?</span></a></li>
+                    <li class="toc-item toc-level-3"><a class="toc-link"
+                        href="#3-%E8%AF%A5%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E7%9F%A5%E8%AF%86%E7%82%B9"><span
+                          class="toc-text">3- 该如何描述知识点?</span></a></li>
+                    <li class="toc-item toc-level-3"><a class="toc-link"
+                        href="#4-%E7%8E%B0%E5%9C%A8%E9%9D%A2%E8%AF%95%E5%AE%98%E6%83%B3%E8%A6%81%E5%90%AC%E5%88%B0%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%9B%9E%E7%AD%94"><span
+                          class="toc-text">4- 现在面试官想要听到什么样的回答?</span></a></li>
+                    <li class="toc-item toc-level-3"><a class="toc-link"
+                        href="#5-%E5%85%B3%E4%BA%8E%E5%8A%9F%E8%83%BD%E7%82%B9%E8%AF%9D%E8%BF%B0%E5%92%8C%E6%95%B4%E7%90%86"><span
+                          class="toc-text">5- 关于功能点话述和整理</span></a></li>
+                    <li class="toc-item toc-level-3"><a class="toc-link"
+                        href="#6-%E6%9C%80%E5%90%8E%E5%9C%A8%E5%95%B0%E5%97%A6%E5%87%A0%E5%8F%A5"><span
+                          class="toc-text">6- 最后在啰嗦几句</span></a></li>
+                  </ol>
+                </div>
+              </article>
+
+
+              <article class="card card-content">
+                <div class="categories-card">
+                  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类
+                  </div>
+                  <div class="categories-list">
+
+                  </div>
+                </div>
+              </article>
+
+              <article class="card card-content">
+                <div class="tags-card">
+                  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+                  <div class="tags-list">
+
+                  </div>
+                </div>
+              </article>
+
+
+            </div>
           </aside>
           <aside class="right-column">
             <div class="sticky-widescreen">
-  
-  
-  <article class="card card-content toc-card">
-    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">1- 如何准备面试题?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E6%97%B6%E9%97%B4"><span class="toc-text">2- 我该如何分配时间?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AF%A5%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">3- 该如何描述知识点?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%8E%B0%E5%9C%A8%E9%9D%A2%E8%AF%95%E5%AE%98%E6%83%B3%E8%A6%81%E5%90%AC%E5%88%B0%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%9B%9E%E7%AD%94"><span class="toc-text">4- 现在面试官想要听到什么样的回答?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%85%B3%E4%BA%8E%E5%8A%9F%E8%83%BD%E7%82%B9%E8%AF%9D%E8%BF%B0%E5%92%8C%E6%95%B4%E7%90%86"><span class="toc-text">5- 关于功能点话述和整理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%9C%80%E5%90%8E%E5%9C%A8%E5%95%B0%E5%97%A6%E5%87%A0%E5%8F%A5"><span class="toc-text">6- 最后在啰嗦几句</span></a></li></ol>
-  </article>
-  
-  
-  <article class="card card-content">
-    <div class="recent-posts-card">
-  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
-  <div class="recent-posts-list">
-    
-      <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2021-06-25</div>
-        <a href="/2021/06/25/面试题描述方式介绍/"><div class="recent-posts-item-content"></div></a>
-      </div>
-    
-  </div>
-</div>
-  </article>
-  
-  
-</div>
+
+
+              <article class="card card-content toc-card">
+                <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+                <ol class="toc">
+                  <li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span
+                        class="toc-text">前言</span></a></li>
+                  <li class="toc-item toc-level-3"><a class="toc-link"
+                      href="#1-%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95%E9%A2%98"><span
+                        class="toc-text">1- 如何准备面试题?</span></a></li>
+                  <li class="toc-item toc-level-3"><a class="toc-link"
+                      href="#2-%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E6%97%B6%E9%97%B4"><span
+                        class="toc-text">2- 我该如何分配时间?</span></a></li>
+                  <li class="toc-item toc-level-3"><a class="toc-link"
+                      href="#3-%E8%AF%A5%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E7%9F%A5%E8%AF%86%E7%82%B9"><span
+                        class="toc-text">3- 该如何描述知识点?</span></a></li>
+                  <li class="toc-item toc-level-3"><a class="toc-link"
+                      href="#4-%E7%8E%B0%E5%9C%A8%E9%9D%A2%E8%AF%95%E5%AE%98%E6%83%B3%E8%A6%81%E5%90%AC%E5%88%B0%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%9B%9E%E7%AD%94"><span
+                        class="toc-text">4- 现在面试官想要听到什么样的回答?</span></a></li>
+                  <li class="toc-item toc-level-3"><a class="toc-link"
+                      href="#5-%E5%85%B3%E4%BA%8E%E5%8A%9F%E8%83%BD%E7%82%B9%E8%AF%9D%E8%BF%B0%E5%92%8C%E6%95%B4%E7%90%86"><span
+                        class="toc-text">5- 关于功能点话述和整理</span></a></li>
+                  <li class="toc-item toc-level-3"><a class="toc-link"
+                      href="#6-%E6%9C%80%E5%90%8E%E5%9C%A8%E5%95%B0%E5%97%A6%E5%87%A0%E5%8F%A5"><span
+                        class="toc-text">6- 最后在啰嗦几句</span></a></li>
+                </ol>
+              </article>
+
+
+              <article class="card card-content">
+                <div class="recent-posts-card">
+                  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban"
+                      style="padding-right: 2px;"></i>最近文章</div>
+                  <div class="recent-posts-list">
+
+                    <div class="recent-posts-item">
+                      <div class="recent-posts-item-title">2021-06-25</div>
+                      <a href="/2021/06/25/面试题描述方式介绍/">
+                        <div class="recent-posts-item-content"></div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </article>
+
+
+            </div>
           </aside>
         </div>
       </div>
     </div>
   </div>
-  
+
   <footer class="footer">
-  <div class="footer-container">
-    <div>
-      <div class="footer-dsc">
-        <span>Copyright ©
-          
-          2020 -
-          
-          2021
-        </span>
-        <a href="/" class="footer-link">小杨的博客 </a>
-      </div>
-    </div>
+    <div class="footer-container">
+      <div>
+        <div class="footer-dsc">
+          <span>Copyright ©
 
-    
-    <div class="footer-dsc">
-      
-      
-      Powered by
-      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
-      
-      
-      <span>&nbsp;|&nbsp;</span>
-      
-      
-      
-      Theme -
-      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
-        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
-      
-    </div>
-    
-    
-    
-    
+            2020 -
+
+            2021
+          </span>
+          <a href="/" class="footer-link">小杨的博客 </a>
+        </div>
+      </div>
+
+
       <div class="footer-dsc">
-        
-        本站总访问量<span id="busuanzi_value_site_pv"></span>次
-        
-        
+
+
+        Powered by
+        <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo
+        </a>
+
+
         <span>&nbsp;|&nbsp;</span>
-        
-        
-        本站总访客数<span id="busuanzi_value_site_uv"></span>次
-        
+
+
+
+        Theme -
+        <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+          rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+
       </div>
-      
-    
-</footer>
-  <a role="button" id="scrollbutton" class="basebutton" >
-  <i class="iconfont icon-arrowleft button-icon"></i>
-</a>
-<a role="button" id="menubutton" class="basebutton">
-  <i class="iconfont icon-menu button-icon"></i>
-</a>
-<a role="button" id="popbutton" class="basebutton">
-  <i class="iconfont icon-expand button-icon"></i>
-</a>
-<a role="button" id="darkbutton" class="basebutton darkwidget">
-  <i class="iconfont icon-weather button-icon"></i>
-</a>
 
-  
-  
-  
+
+
+
+      <div class="footer-dsc">
+
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+
+        <span>&nbsp;|&nbsp;</span>
+
+
+        本站总访客数<span id="busuanzi_value_site_uv"></span>次
+
+      </div>
+
+
+  </footer>
+  <a role="button" id="scrollbutton" class="basebutton">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+  <a role="button" id="menubutton" class="basebutton">
+    <i class="iconfont icon-menu button-icon"></i>
+  </a>
+  <a role="button" id="popbutton" class="basebutton">
+    <i class="iconfont icon-expand button-icon"></i>
+  </a>
+  <a role="button" id="darkbutton" class="basebutton darkwidget">
+    <i class="iconfont icon-weather button-icon"></i>
+  </a>
+
+
+
+
   <script>
-  var addImgLayout = function () {
-    var img = document.querySelectorAll('.post-content img');
-    var i;
-    for (i = 0; i < img.length; i++) {
-      var wrapper = document.createElement('a');
-      wrapper.setAttribute('data-fslightbox', 'gallery');
-      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
-      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
-      img[i].parentElement.insertBefore(wrapper, img[i]);
-      wrapper.appendChild(img[i]);
+    var addImgLayout = function () {
+      var img = document.querySelectorAll('.post-content img');
+      var i;
+      for (i = 0; i < img.length; i++) {
+        var wrapper = document.createElement('a');
+        wrapper.setAttribute('data-fslightbox', 'gallery');
+        wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+        wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+        img[i].parentElement.insertBefore(wrapper, img[i]);
+        wrapper.appendChild(img[i]);
+      }
+      refreshFsLightbox();
     }
-    refreshFsLightbox();
-  }
-</script>
-<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
-  
-  
-  
-<script src="/js/main.js"></script>
+  </script>
+  <script>
+    loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)
+  </script>
 
-  
-  <script>loadScript("/js/lib/busuanzi.min.js")</script>
-  
-  
+
+
+  <script src="/js/main.js"></script>
+
+
+  <script>
+    loadScript("/js/lib/busuanzi.min.js")
+  </script>
+
+
   <script>
     var addLazyload = function () {
       var observer = lozad('.lozad', {
@@ -473,9 +599,11 @@
       observer.observe();
     }
   </script>
-  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
-  
-  
+  <script>
+    loadScript("/js/lib/lozad.min.js", addLazyload)
+  </script>
+
+
 </body>
 
 </html>
